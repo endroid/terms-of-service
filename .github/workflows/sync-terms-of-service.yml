@@ -1,0 +1,75 @@
+name: Sync terms of service
+
+on:
+  schedule:
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-terms-of-service
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check access tokens
+        env:
+          ANDROID_DEV_READ_TOKEN: ${{ secrets.ANDROID_DEV_READ_TOKEN }}
+          TERMS_OF_SERVICE_WRITE_TOKEN: ${{ secrets.TERMS_OF_SERVICE_WRITE_TOKEN }}
+        run: |
+          if [[ -z "$ANDROID_DEV_READ_TOKEN" || -z "$TERMS_OF_SERVICE_WRITE_TOKEN" ]]; then
+            echo '::error::Set ANDROID_DEV_READ_TOKEN (Contents read on endroid/android-dev) and TERMS_OF_SERVICE_WRITE_TOKEN (Contents write on endroid/terms-of-service).'
+            exit 1
+          fi
+
+      - name: Check out published terms
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          token: ${{ secrets.TERMS_OF_SERVICE_WRITE_TOKEN }}
+          path: terms
+
+      - name: Check out source terms
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: endroid/android-dev
+          ref: main
+          token: ${{ secrets.ANDROID_DEV_READ_TOKEN }}
+          path: android-dev
+          persist-credentials: false
+          sparse-checkout: apps/*/play/terms-of-service.html
+          sparse-checkout-cone-mode: false
+
+      - name: Sync terms to the repository root
+        working-directory: terms
+        shell: bash
+        run: |
+          shopt -s nullglob
+          for terms in ../android-dev/apps/*/play/terms-of-service.html; do
+            game="${terms#../android-dev/apps/}"
+            game="${game%%/*}"
+            cp -- "$terms" "$game.html"
+          done
+          for terms in *.html; do
+            game="${terms%.html}"
+            if [[ ! -f "../android-dev/apps/$game/play/terms-of-service.html" ]]; then
+              rm -- "$terms"
+            fi
+          done
+
+      - name: Commit and push changes to main
+        working-directory: terms
+        run: |
+          git add --all
+          if git diff --cached --quiet; then
+            echo 'Terms of service are already up to date.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Sync terms of service from android-dev'
+          git push origin HEAD:main
