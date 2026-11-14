@@ -1,8 +1,129 @@
 <!doctype html>
-<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thumbprint Terms of Service</title>
-<main><h1>Thumbprint Terms of Service</h1><p>Effective 12 November 2026 · Endroid, Netherlands</p>
-<h2>Personal use</h2><p>Thumbprint licenses its icon artwork for personal use on devices you own or control. Do not resell, redistribute or extract artwork for another pack or product. Endroid and its licensors retain their rights. Separate open-source licences and mandatory statutory rights remain unaffected.</p>
-<h2>Phone-review edition</h2><p>This first-version collection is supplied for review. Its artwork has not undergone a visual acceptance process. Coverage is limited to included icons; not every app is covered. A compatible launcher is required to apply the pack, and support varies by launcher and version. Unmapped apps keep their original icons. Third-party names and trademarks identify compatibility and do not imply affiliation or endorsement.</p>
-<h2>Requests and purchases</h2><p>Optional requests contain only apps you select and are sent only when you explicitly share them. There is no purchase gate, in-app purchase or subscription in this edition. Future availability and fulfilment of any particular request are not guaranteed. Any applicable store purchase or refund rights remain governed by the store and law.</p>
-<h2>Responsibility</h2><p>The app is provided as available without a promise of error-free operation or universal launcher compatibility. Nothing excludes liability or consumer rights that cannot legally be excluded. Contact <a href="mailto:info@endroid.nl">info@endroid.nl</a> with questions.</p></main></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thumbprint terms of service: personal-use icon artwork, launcher compatibility, optional requests, purchases and your consumer rights.">
+  <meta name="theme-color" content="#f8f3eb">
+  <title>Terms of service · Thumbprint</title>
+  <style>
+    :root { color-scheme: light; --paper: #f8f3eb; --ink: #332b30; --muted: #6f6166; --green: #285d48; --line: #e6dcd1; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.75 system-ui, sans-serif; }
+    a { color: var(--green); text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid #a54f2c; outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; top: -80px; left: 20px; z-index: 2; padding: 8px 16px; background: white; }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1100px, 100%); margin: auto; padding: 0 32px; }
+    .top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+    .brand { color: var(--green); font-size: 25px; font-weight: 850; letter-spacing: -1.2px; }
+    .brand span { display: block; margin-top: -3px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    nav { display: flex; flex-wrap: wrap; gap: 5px; }
+    nav a { padding: 9px 15px; border-radius: 24px; font-size: 14px; font-weight: 650; text-decoration: none; }
+    nav a[aria-current="page"] { background: var(--green); color: #fffdf7; box-shadow: 0 3px 0 #163e2e; }
+    .hero { position: relative; padding: 56px 0 34px; }
+    .eyebrow { margin: 0 0 16px; color: #8a4d34; font-size: 12px; font-weight: 750; letter-spacing: 2px; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 760px; color: var(--green); font-size: clamp(39px, 6.4vw, 66px); font-weight: 800; line-height: 1.08; letter-spacing: -2.5px; }
+    h1 span { display: block; margin-top: 14px; color: var(--ink); font-size: .49em; font-weight: 500; letter-spacing: -1px; }
+    .intro { max-width: 650px; margin: 24px 0 18px; color: var(--muted); font-size: 18px; }
+    .date { color: var(--muted); font-size: 13px; }
+    .pebbles { position: absolute; top: 64px; right: 10px; width: 150px; height: 125px; pointer-events: none; }
+    .pebbles i { position: absolute; width: 73px; height: 77px; border-radius: 46% 54% 43% 57%; background: #e6a083; box-shadow: inset 8px 9px 13px #ffffff65, inset -6px -8px 12px #703c3229, 0 10px 16px #65463413; transform: rotate(-18deg); }
+    .pebbles i:nth-child(2) { left: 70px; top: 6px; width: 69px; height: 69px; background: #b4c89b; transform: rotate(15deg); }
+    .pebbles i:nth-child(3) { left: 42px; top: 62px; width: 60px; height: 57px; background: #e9cd87; transform: rotate(30deg); }
+    .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 0 0 48px; }
+    .summary div { padding: 20px 22px; border: 1px solid var(--line); border-radius: 18px; background: #fffdf8; box-shadow: 0 4px 0 #ede4d9; }
+    .summary strong { display: block; color: var(--green); font-size: 18px; }
+    .summary span { display: block; margin-top: 4px; color: var(--muted); font-size: 14px; }
+    .layout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 48px; align-items: start; }
+    aside { position: sticky; top: 28px; padding: 14px 0; }
+    aside h2 { margin: 0 0 12px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+    aside a { display: block; padding: 6px 0; color: var(--muted); font-size: 14px; text-decoration: none; }
+    article { min-width: 0; padding: 30px 40px; border: 1px solid var(--line); border-radius: 26px; background: #fffdf9; box-shadow: 0 12px 40px #563f2d06; }
+    section + section { margin-top: 32px; padding-top: 26px; border-top: 1px solid var(--line); }
+    section h2 { margin: 0 0 12px; font-size: 24px; line-height: 1.3; letter-spacing: -.6px; }
+    p { margin: 0 0 15px; }
+    section p:last-child { margin-bottom: 0; }
+    ul { margin: 12px 0 16px; padding-left: 23px; }
+    li { margin: 8px 0; }
+    code { font-size: .86em; overflow-wrap: anywhere; }
+    .contact { margin: 32px 0 0; padding: 24px 28px; border-radius: 20px; background: #e8eedf; }
+    .contact strong { display: block; color: var(--green); font-size: 21px; }
+    .contact p { margin: 4px 0 8px; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 48px; padding: 24px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    @media (max-width: 800px) { .pebbles { display: none; } .layout { grid-template-columns: 1fr; gap: 18px; } aside { position: static; padding: 0 0 18px; } aside a { display: inline-block; margin-right: 18px; } .summary { margin-bottom: 32px; } }
+    @media (max-width: 520px) { .wrap { padding: 0 20px; } .top { padding-top: 22px; padding-bottom: 22px; gap: 18px; } nav a { padding: 9px 12px; } .hero { padding-top: 36px; } h1 { letter-spacing: -1.7px; } .intro { font-size: 17px; } .summary { grid-template-columns: 1fr; gap: 10px; } .summary div { padding: 14px 18px; } article { padding: 26px 22px; border-radius: 20px; } section h2 { font-size: 22px; } .contact { padding: 22px; } }
+    @media print { body { background: white; color: black; font-size: 11pt; } .wrap { width: 100%; padding: 0; } nav, aside, .pebbles, .skip { display: none; } .hero { padding-top: 24px; } .summary { margin-bottom: 24px; } .layout { display: block; } article { padding: 0; border: 0; box-shadow: none; } h1 { font-size: 32pt; } .contact, .summary div { box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to terms</a>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">Thumbprint<span>Little works of clay · Endroid</span></div>
+      <nav aria-label="Legal pages">
+        <a href="https://endroid.github.io/privacy-policy/thumbprint.html">Privacy</a>
+        <a href="https://endroid.github.io/terms-of-service/thumbprint.html" aria-current="page">Terms of service</a>
+      </nav>
+    </header>
+    <main id="content">
+      <div class="hero">
+        <p class="eyebrow">A little clarity. A lot of character.</p>
+        <h1>Terms of service<span>Made for your own little world.</span></h1>
+        <p class="intro">The essentials of using Thumbprint: enjoying the artwork, making it yours, and knowing where you stand.</p>
+        <p class="date">Effective <time datetime="2026-11-13">13 November 2026</time> · Endroid, Netherlands · <code>nl.endroid.thumbprint</code></p>
+        <div class="pebbles" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+      <div class="summary" aria-label="Terms at a glance">
+        <div><strong>Your personal touch</strong><span>Use the icons on your own devices.</span></div>
+        <div><strong>Launcher matters</strong><span>Compatibility depends on your launcher.</span></div>
+        <div><strong>Your rights stay yours</strong><span>Consumer protections still apply.</span></div>
+      </div>
+      <div class="layout">
+        <aside aria-label="On this page">
+          <h2>On this page</h2>
+          <a href="#agreement">About these terms</a><a href="#licence">Using the artwork</a><a href="#compatibility">Coverage &amp; launchers</a><a href="#requests">Optional requests</a><a href="#purchases">Purchases &amp; refunds</a><a href="#rights">Responsibility &amp; rights</a><a href="#changes">Updates &amp; applicable law</a>
+        </aside>
+        <article aria-label="Terms of service details">
+          <section id="agreement"><h2>About these terms</h2>
+            <p>Thumbprint is an Android icon pack provided by Endroid in the Netherlands. These terms describe your use of the app and its artwork. If you do not agree, do not use the app; any purchase, refund or other statutory rights remain unaffected.</p>
+            <p>If you are not old enough to enter an agreement where you live, a parent or guardian must approve your use and any purchase.</p>
+          </section>
+          <section id="licence"><h2>A licence for your own devices</h2>
+            <p>Subject to these terms and any applicable purchase, Endroid grants you a non-exclusive licence to install and use Thumbprint and its supplied icons for personal, non-commercial use on devices you own or control, including any sharing expressly permitted by your store.</p>
+            <p>The artwork is licensed, not sold. Do not resell, redistribute, sublicense or extract it for another icon pack, asset collection or product. Endroid and its licensors retain their rights in the app and original artwork. Separate open-source and third-party licences, and rights granted by law, remain unaffected.</p>
+            <p>Third-party app names and trademarks identify the apps represented or supported. They belong to their respective owners and do not imply affiliation with, sponsorship by or endorsement of Thumbprint.</p>
+          </section>
+          <section id="compatibility"><h2>Coverage &amp; launcher compatibility</h2>
+            <p>Thumbprint contains digital, clay-inspired artwork, not photographs of physical clay. Coverage is limited to the icons included in the installed version; not every app or official identity is covered. Some designs use original app-name lettering or monograms. Unmapped apps keep their original icons.</p>
+            <p>A compatible third-party launcher is required to apply the pack. Applying icons, choosing individual icons and dynamic calendar behaviour depend on the launcher and its version. Stock launchers may not support icon packs. We do not promise universal compatibility or a particular future addition.</p>
+          </section>
+          <section id="requests"><h2>Optional icon requests</h2>
+            <p>Requests are included at no extra charge. You select which apps to include and explicitly choose whether to share the resulting ZIP through another app. Preparing or sharing a request has no purchase gate; a missing or negative Google Play verification response does not block the handoff.</p>
+            <p>A request is not a guarantee that a particular icon will be created, accepted or delivered by a particular date. Sending a request or support material permits Endroid to use it as needed to handle that request; it does not transfer your ownership. Send only information you are entitled to share.</p>
+            <p>See the <a href="https://endroid.github.io/privacy-policy/thumbprint.html">Thumbprint privacy policy</a> for the request contents, Google Play verification, local storage and deletion choices.</p>
+          </section>
+          <section id="purchases"><h2>Purchases &amp; refunds</h2>
+            <p>If a store charges for the app, it shows the price before purchase and handles the transaction under its own terms. The current version has no in-app purchases or subscriptions. Endroid does not receive your payment card details through the app.</p>
+            <p>Refunds, cancellation and remedies follow the store's rules and applicable law. A purchase does not promise all future content or features unless expressly included in the offer. Nothing here waives statutory withdrawal rights, required updates or remedies for digital content that does not meet its description.</p>
+          </section>
+          <section id="rights"><h2>Responsibility &amp; your legal rights</h2>
+            <p>Features depend on Android, your device and third-party launcher behaviour. We do not promise uninterrupted external services or error-free operation. Contact us if the app does not work as described.</p>
+            <p>To the extent permitted by law, Endroid gives no additional guarantees beyond the app's description and statutory guarantees, and is not responsible for losses that were not reasonably foreseeable. Nothing excludes or limits liability that cannot lawfully be excluded or limited, including fraud, deliberate misconduct or applicable liability for death or personal injury. Your mandatory consumer rights remain in force.</p>
+            <p>You can stop using and uninstall the app at any time. Uninstalling does not automatically request a store refund. A serious breach of these terms may end the licence to use the affected app, to the extent permitted by law; statutory rights and separate component licences remain unaffected.</p>
+          </section>
+          <section id="changes"><h2>Updates &amp; applicable law</h2>
+            <p>Updates may fix issues or change features. Changes to paid content remain subject to applicable law, including required notice, updates, consent and remedies. We do not promise a particular future feature or support period unless stated in the purchase offer or required by law.</p>
+            <p>Revised terms will appear here with a new effective date. Material changes will be communicated as required by law and do not retrospectively remove purchased or statutory rights.</p>
+            <p>Dutch law applies without depriving consumers of mandatory protections in their country of residence or the right to bring a claim before a court available under applicable law.</p>
+          </section>
+        </article>
+      </div>
+      <div class="contact"><strong>Let's keep things clear.</strong><p>Questions, support or a problem with the app? Get in touch.</p><a href="mailto:info@endroid.nl">info@endroid.nl</a></div>
+    </main>
+    <footer><span>Thumbprint · Made with character by Endroid.</span><a href="https://endroid.github.io/privacy-policy/thumbprint.html">Read the privacy policy ↗</a></footer>
+  </div>
+</body>
+</html>
