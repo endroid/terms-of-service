@@ -1,16 +1,81 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Madí terms of service</title>
-<main>
-  <h1>Madí terms of service</h1>
-  <p>Effective 24 November 2026. Madí is an Android icon pack provided by Endroid, Netherlands.</p>
-  <h2>Artwork and compatibility</h2>
-  <p>Endroid grants a non-exclusive licence to use the app and artwork on devices you own or control for personal, non-commercial use. Do not resell or redistribute the artwork as another pack or asset collection. Third-party names and marks identify the apps depicted, belong to their respective owners, and do not imply endorsement.</p>
-  <p>A compatible launcher is required to apply icons. Unthemed apps keep their original icons. The included calendar artwork is static.</p>
-  <h2>Requests and purchases</h2>
-  <p>Icon requests are optional and do not guarantee fulfillment. By sending a request, you allow Endroid to use the information you provide to handle it. Madí has no in-app purchases. If a store charges for the app, its payment and refund terms also apply.</p>
-  <p>Nothing here limits mandatory consumer rights. For support, contact <a href="mailto:info@endroid.nl">info@endroid.nl</a>.</p>
-</main>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191c30">
+  <meta name="description" content="Terms for using the Madí Android icon pack, its artwork, and optional icon requests.">
+  <title>Terms of service · Madí</title>
+  <style>
+    :root { color-scheme:light; --navy:#191c30; --paper:#f9f2e6; --card:#fffcf6; --ink:#202031; --muted:#595766; --blue:#21479b; --red:#a6302a; --gold:#ffcb38; --line:#ded5c9; }
+    * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.7 system-ui,sans-serif; }
+    .wrap { width:min(1080px,100%); padding-inline:clamp(18px,4vw,42px); margin:auto; }
+    a { color:var(--blue); text-underline-offset:4px; } a:focus-visible { outline:3px solid #cf7315; outline-offset:4px; }
+    .skip { position:absolute; top:0; left:12px; transform:translateY(-150%); padding:8px 12px; background:var(--card); z-index:2; }
+    .skip:focus { transform:translateY(12px); }
+    header { background:var(--navy); color:#fff3dd; }
+    .bar { display:flex; align-items:center; justify-content:space-between; gap:10px 24px; flex-wrap:wrap; padding:19px 0; border-bottom:1px solid #ffffff2b; }
+    .brand { font:700 23px Georgia,serif; } .brand small { padding-left:8px; color:#efcf72; font:600 12px system-ui,sans-serif; }
+    nav { display:flex; flex-wrap:wrap; gap:6px 12px; } nav a { color:#fff3dd; padding:4px 2px; } nav [aria-current] { color:var(--gold); text-decoration-thickness:2px; }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(118px,230px); align-items:center; gap:26px; padding:52px 0 60px; }
+    .label { margin:0 0 10px; color:var(--gold); font-size:.75rem; font-weight:750; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { font:400 clamp(2.6rem,7vw,4.8rem)/1.05 Georgia,serif; letter-spacing:-.045em; margin:0; }
+    .intro { max-width:55ch; margin:18px 0 10px; color:#f5e5ca; } .date { margin:0; color:#cbc7d1; font-size:.85rem; }
+    svg { width:100%; height:auto; max-height:178px; }
+    .summary { list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; padding:0; margin:-20px 0 36px; position:relative; }
+    .summary li { background:var(--card); padding:12px 16px; border:1px solid var(--line); border-top:4px solid var(--red); }
+    .summary li:nth-child(2) { border-top-color:var(--blue); } .summary li:nth-child(3) { border-top-color:#c89412; }
+    .summary strong { display:block; } .summary span { color:var(--muted); font-size:.88rem; }
+    article { max-width:790px; margin:auto; background:var(--card); padding:clamp(20px,5vw,44px); border:1px solid var(--line); }
+    section + section { margin-top:25px; padding-top:21px; border-top:1px solid var(--line); }
+    h2 { margin:0 0 8px; font:400 clamp(1.45rem,4vw,1.8rem)/1.2 Georgia,serif; }
+    p { margin:0 0 10px; } section p:last-child { margin-bottom:0; } code { overflow-wrap:anywhere; }
+    footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; margin:26px 0 34px; color:var(--muted); font-size:.88rem; }
+    @media (max-width:630px) { .hero { grid-template-columns:minmax(0,1fr) 58px; gap:14px; padding:30px 0 44px; } .summary { grid-template-columns:1fr; gap:8px; margin-bottom:22px; } .summary strong { display:inline; margin-right:5px; } }
+    @media print { header { background:white; color:black; } .hero p,.brand small { color:black; } nav, .skip, svg { display:none; } .summary { margin-top:0; } article { border:0; padding:0; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to terms of service</a>
+  <header>
+    <div class="wrap">
+      <div class="bar"><div class="brand">Madí <small>Endroid</small></div>
+        <nav aria-label="Legal pages"><a href="https://endroid.github.io/privacy-policy/madi.html">Privacy policy</a><a href="https://endroid.github.io/terms-of-service/madi.html" aria-current="page">Terms of service</a></nav>
+      </div>
+      <div class="hero">
+        <div><p class="label">Android icon pack</p><h1>Terms of service</h1>
+          <p class="intro">How you can use Madí’s artwork, what launchers support, and what happens when you request an icon.</p>
+          <p class="date">Effective <time datetime="2026-11-24">24 November 2026</time> · <code>nl.endroid.madi</code></p>
+        </div>
+        <svg viewBox="0 0 200 170" aria-hidden="true" focusable="false">
+          <path fill="#3159b1" d="M14 120 43 48 105 59 87 118 46 152Z"/><path fill="#e14d3b" d="M47 30 136 11 126 64 88 109 66 84Z"/>
+          <path fill="#ffcb38" d="M107 85 184 55 192 111 151 145 92 129Z"/><path fill="#fff3dd" d="M123 44 166 31 170 70 141 113 111 93Z"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    <ul class="summary" aria-label="Terms at a glance">
+      <li><strong>Personal use</strong><span>Use the art on your own devices.</span></li>
+      <li><strong>Launcher required</strong><span>Not all launchers support icon packs.</span></li>
+      <li><strong>Optional requests</strong><span>Requests don’t guarantee new artwork.</span></li>
+    </ul>
+    <article aria-label="Terms of service details">
+      <section><h2>Licence and artwork</h2>
+        <p>Endroid, Netherlands, provides Madí. We grant you a non-exclusive licence to use the app and its artwork for personal, non-commercial use on devices you own or control. Do not resell or redistribute the artwork as another pack, product or asset collection. Separate open-source licences and rights granted by law are unaffected.</p>
+        <p>App names and marks identify the apps depicted, belong to their respective owners, and do not imply endorsement or affiliation.</p>
+      </section>
+      <section><h2>Launchers and coverage</h2>
+        <p>Applying the pack requires a compatible launcher. Available icons depend on the installed version, and apps without a matching design keep their original icons. The initial release’s calendar artwork is static. We do not promise universal compatibility or a specific future addition.</p>
+      </section>
+      <section><h2>Icon requests</h2>
+        <p>Requests are optional and do not guarantee that an icon will be made. By sending a request, you allow Endroid to use what you provide to handle it. Send only material you are entitled to share. See the <a href="https://endroid.github.io/privacy-policy/madi.html">privacy policy</a> for the information included and your choices.</p>
+      </section>
+      <section><h2>Purchases, refunds and consumer rights</h2>
+        <p>Madí has no in-app purchases or subscriptions. If a store charges for the app, the store handles payment and refunds under its terms and applicable law. Uninstalling the app does not automatically request a refund. Nothing in these terms limits mandatory consumer rights.</p>
+      </section>
+    </article>
+    <footer><span>Madí · An Android icon pack by Endroid</span><a href="mailto:info@endroid.nl">Contact Endroid</a></footer>
+  </main>
+</body>
 </html>
